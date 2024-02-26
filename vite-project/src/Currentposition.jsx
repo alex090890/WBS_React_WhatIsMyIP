@@ -25,7 +25,9 @@ const LocationMarker = () => {
 }
 
 const Currentposition = () => (
-  <MapContainer
+  <div>
+    <h2>My location:</h2>
+    <MapContainer
     center={{ lat: 51.505, lng: -0.09 }}
     zoom={13}
     scrollWheelZoom={false} className='map-container' style={{ width: "500px", height: "400px" }}>
@@ -35,6 +37,7 @@ const Currentposition = () => (
     />
         <LocationMarker />
   </MapContainer>
+  </div>
 );
 
 export default Currentposition;

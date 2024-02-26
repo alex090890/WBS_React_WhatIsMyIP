@@ -9,7 +9,9 @@ function App() {
 
 
   return (
-    <Tabs
+    <div>
+      <h1>What is my IP address?</h1>
+      <Tabs
       defaultActiveKey="profile"
       id="uncontrolled-tab-example"
       className="mb-3"
@@ -22,6 +24,7 @@ function App() {
         <Currentposition />
       </Tab>
     </Tabs>
+    </div>
     )
 }
 

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 
 export default function WhereAmI() {
   const [location, setLocation] = useState('');
@@ -35,18 +34,17 @@ export default function WhereAmI() {
     <div>
       <h3>Your location: </h3>
       <Button onClick={getLocation} variant="primary">Get location</Button>
-      <Card style={{ width: '40rem' }}>
-        <Card.Body>
-                  <div>{location}</div>
+      <div className="infolocation">
+      <div>{location}</div>
       {country && (
         <div>
           <div>Your country: {country}</div>
         <div>{flagUrl && (<img className="locationimg" src={flagUrl} alt={`${country} flag`} width="50" />
-          )}</div>
+            )}
+            </div>
         </div>
       )}
-        </Card.Body>
-      </Card>
+      </div>
     </div>
   );
 }
