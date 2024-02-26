@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 export default function WhereAmI() {
   const [location, setLocation] = useState('');
@@ -31,9 +33,11 @@ export default function WhereAmI() {
 
   return (
     <div>
-      <h2>Your location: </h2>
-      <button onClick={getLocation}>Get location</button>
-      <div>{location}</div>
+      <h3>Your location: </h3>
+      <Button onClick={getLocation} variant="primary">Get location</Button>
+      <Card style={{ width: '40rem' }}>
+        <Card.Body>
+                  <div>{location}</div>
       {country && (
         <div>
           <div>Your country: {country}</div>
@@ -41,6 +45,8 @@ export default function WhereAmI() {
           )}</div>
         </div>
       )}
+        </Card.Body>
+      </Card>
     </div>
   );
 }

@@ -1,17 +1,3 @@
-/*#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.whereami {
-  height: 500px;
-  width: 500px;
-  border: 1px solid black;
-}
-*/
-
 .leaflet-container {
   width: 100%;
   height: 100vh;
